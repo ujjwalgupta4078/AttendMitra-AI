@@ -1,0 +1,5 @@
+ROLES = [
+    "Student",
+    "Teacher",
+    "Admin"
+]

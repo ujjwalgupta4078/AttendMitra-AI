@@ -15,13 +15,13 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.page_link("pages/1_Student_Login.py", label="👨‍🎓 Student Login")
+    st.page_link("pages/Student_Login.py", label="👨‍🎓 Student Login")
 
 with col2:
-    st.page_link("pages/2_Teacher_Login.py", label="👨‍🏫 Teacher Login")
+    st.page_link("pages/Teacher_Login.py", label="👨‍🏫 Teacher Login")
 
 with col3:
-    st.page_link("pages/3_Admin_Login.py", label="👨‍💼 Admin Login")
+    st.page_link("pages/Admin_Login.py", label="👨‍💼 Admin Login")
 
 st.divider()
 
