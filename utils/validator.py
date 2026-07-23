@@ -1,12 +1,19 @@
-def validate_student(name, roll, email):
+import re
 
-    if not name:
-        return False, "Name is required."
+def validate_student(name, roll_no, email, mobile):
 
-    if not roll:
-        return False, "Roll Number is required."
+    if name.strip() == "":
+        return False, "Name cannot be empty."
 
-    if "@" not in email:
-        return False, "Invalid Email."
+    if roll_no.strip() == "":
+        return False, "Roll Number cannot be empty."
 
-    return True, "Valid"
+    email_pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
+
+    if not re.match(email_pattern, email):
+        return False, "Invalid email address."
+
+    if len(mobile) != 10 or not mobile.isdigit():
+        return False, "Mobile number must contain exactly 10 digits."
+
+    return True, "Validation Successful"

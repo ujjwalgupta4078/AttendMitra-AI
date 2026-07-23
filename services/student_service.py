@@ -1,13 +1,18 @@
 from database.schema.queries.supabase_client import supabase
 
+def register_student(student_data):
 
-def register_student(data):
+    try:
 
-    response = (
-        supabase
-        .table("students")
-        .insert(data)
-        .execute()
-    )
+        response = (
+            supabase
+            .table("students")
+            .insert(student_data)
+            .execute()
+        )
 
-    return response
+        return True, response
+
+    except Exception as e:
+
+        return False, str(e)
