@@ -3,11 +3,29 @@ import streamlit as st
 st.set_page_config(
     page_title="AttendMitra AI",
     page_icon="🎓",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 st.title("🎓 AttendMitra AI")
 
-st.subheader("AI Powered Attendance Management System")
+st.markdown("## AI Powered Attendance Management System")
 
-st.success("Module 1 Setup Completed Successfully!")
+st.divider()
+
+st.write("""
+Welcome to **AttendMitra AI**.
+
+This application will provide:
+
+- 📸 Face Recognition Attendance
+- 🎤 Voice Recognition Attendance
+- 👨‍🎓 Student Login
+- 👨‍🏫 Teacher Login
+- 👨‍💼 Admin Panel
+- ☁️ Supabase Cloud Database
+- 📊 Attendance Reports
+- 🤖 AI Verification
+""")
+
+st.success("Module 2 Started Successfully 🚀")
