@@ -1,14 +1,37 @@
 import streamlit as st
 
-st.title("📝 Student Registration")
+st.title("🎓 Student Registration")
 
-st.text_input("Student Name")
+with st.form("student_form"):
 
-st.text_input("Roll Number")
+    name = st.text_input("Full Name")
 
-st.text_input("Department")
+    roll = st.text_input("Roll Number")
 
-st.file_uploader("Upload Student Photo")
+    email = st.text_input("Email")
 
-if st.button("Register"):
-    st.success("Registration Module Coming Soon.")
+    mobile = st.text_input("Mobile Number")
+
+    department = st.selectbox(
+        "Department",
+        [
+            "AIML",
+            "CSE",
+            "IT",
+            "ECE",
+            "ME",
+            "Civil"
+        ]
+    )
+
+    semester = st.selectbox(
+        "Semester",
+        [1,2,3,4,5,6,7,8]
+    )
+
+    photo = st.file_uploader(
+        "Upload Photo",
+        type=["jpg","jpeg","png"]
+    )
+
+    submit = st.form_submit_button("Register")
